@@ -23,14 +23,12 @@ h1{
     padding: 20px;
     padding: auto;
     overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .old-command{
     padding: 3px;
-}
-
-#output div {
-    white-space: pre;
 }
 
 .output-line{

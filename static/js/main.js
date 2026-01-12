@@ -1,6 +1,8 @@
 // main.js
 // Terminal engine & input handling
 
+import { commands } from "./commands.js";
+
 const output = document.getElementById("output");
 const input = document.getElementById("commandInput");
 
@@ -62,13 +64,6 @@ input.addEventListener("keydown", (e) => {
     }
 
     // Exact match (e.g. "help help")
-    if (commands[raw]) {
-        const result = commands[raw](args);
-        if (result !== null) printBlock(result);
-        return;
-    }
-
-    // Command + arguments (e.g. "ls projects")
     if (commands[cmd]) {
         const result = commands[cmd](args);
         if (result !== null) printBlock(result);
